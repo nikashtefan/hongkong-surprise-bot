@@ -1,0 +1,11 @@
+# Telegram Bot
+python-telegram-bot==20.7
+
+# Utils
+python-dotenv==1.0.0
+
+# QR Code Generation (опционально, для generate_qr.py)
+qrcode[pil]==7.4.2
+pillow==10.1.0
+
+
