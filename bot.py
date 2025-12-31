@@ -288,7 +288,11 @@ def main() -> None:
     
     # Запускаем бота
     logger.info("🚀 Бот запущен!")
-    application.run_polling(allowed_updates=Update.ALL_TYPES)
+    logger.info(f"BOT_TOKEN: {BOT_TOKEN[:20]}...")
+    application.run_polling(
+        allowed_updates=Update.ALL_TYPES,
+        drop_pending_updates=True,
+    )
 
 
 if __name__ == "__main__":
