@@ -37,6 +37,7 @@ logger = logging.getLogger(__name__)
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     """Начало квеста - приветствие и проблема с доставкой."""
     user = update.effective_user
+    logger.info(f"User {user.id} started the quest")
     
     await update.message.reply_text("🎨 Привет!")
     await asyncio.sleep(2)
@@ -257,6 +258,8 @@ def main() -> None:
     if not BOT_TOKEN:
         logger.error("BOT_TOKEN не найден! Создай файл .env с токеном бота.")
         return
+    
+    logger.info(f"Starting bot with token: {BOT_TOKEN[:20]}...")
     
     # Создаём приложение
     application = Application.builder().token(BOT_TOKEN).build()
