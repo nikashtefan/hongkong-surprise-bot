@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Telegram Bot Token
-BOT_TOKEN = os.getenv("BOT_TOKEN", "8563669117:AAGkW_cchbmLwq46yxlwftWCTBZA7aYjjGU")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "")
 
 # Правильные ответы
 CORRECT_TRACK_NUMBER = "14012010"
